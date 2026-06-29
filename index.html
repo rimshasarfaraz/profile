@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rimsha Sarfaraz</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: #111;
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", "Gill Sans", "Gill Sans MT", Helvetica, sans-serif;
+      font-feature-settings: "kern";
+      font-kerning: normal;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 38px 32px 56px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    .brand {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #777;
+      padding-bottom: 8px;
+      transition: color 0.2s ease;
+    }
+    .nav-links a.active {
+      color: #111;
+      border-bottom: 2px solid #1a5bff;
+    }
+    .columns {
+      display: grid;
+      grid-template-columns: minmax(280px, 320px) minmax(0, 1fr);
+      gap: 48px;
+      align-items: start;
+    }
+    .profile {
+      display: grid;
+      gap: 22px;
+    }
+    .profile img {
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+      object-fit: cover;
+    }
+    .profile-title {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .profile-meta {
+      margin: 0;
+      color: #4f4f4f;
+      font-size: 0.92rem;
+      line-height: 1.85;
+      white-space: pre-line;
+    }
+    .profile-meta a {
+      color: #1a5bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .students-label {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .student-list {
+      margin: 10px 0 0;
+      padding: 0;
+      list-style: none;
+      color: #4f4f4f;
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+    .student-list li + li { margin-top: 10px; }
+    .student-list a {
+      color: #1a5bff;
+      text-decoration: none;
+    }
+    .content h1 {
+      margin: 0;
+      font-size: clamp(3rem, 4vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.03;
+      max-width: 82ch;
+    }
+    .content p {
+      margin: 1.3em 0 0;
+      color: #333;
+      font-size: 0.96rem;
+      max-width: 80ch;
+    }
+    .content a {
+      color: #1a5bff;
+      text-decoration: none;
+    }
+    .content p + p { margin-top: 0.4rem; }
+    .section-heading {
+      margin: 2.4em 0 0.5em;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    @media (max-width: 980px) {
+      .columns { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .page { padding: 24px 20px 40px; }
+      header { flex-direction: column; align-items: flex-start; }
+      .nav-links { gap: 18px; }
+      .content h1 { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+        <h1 class="brand"></h1>
+      <nav class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+      </nav>
+    </header>
+    <div class="columns">
+      <div class="profile">
+        <img src="picture.jpg" alt="Profile image" />
+        <h1 class="brand">Rimsha Sarfaraz</h1>
+        
+      </div>
+      <div class="content">
+        <p>I research, design and build technologies that empower people to engage in health behaviors through a human-centered approach. My work draws on people&apos;s lived experiences and expert practices to support the implementation of evidence-based behavioral interventions.</p>
+        <p>I am affiliated with the <a href="#">Connected Learning Lab</a> and the <a href="#">Institute for Future Health</a>.</p>
+        <p>My research was generously funded by the National Science Foundation, National Institutes of Health, and UCI Internal grants.</p>
+        <p>I received my PhD in <a href="#">Human Centered Design and Engineering</a> at University of Washington, where I was affiliated with the <a href="#">DUB Group</a> and the <a href="#">UW Alacrity Center</a>. I completed a MS in Computer Science at <a href="#">Harvard University</a>, and a BS in Computer Science at <a href="#">Jacobs University Bremen</a> in Germany. I worked on research teams at Microsoft Research, FXPAL, Intel Labs and NASA Jet Propulsion Lab.</p>
+        <p>I run initiatives to broaden participation in computing and engineering. While at University of Washington, I grew the Outreach program in the HCDE department. I led undergraduate students in teaching design and engineering workshops with thousands of K-12 students and teachers from across the Seattle area and Washington state.</p>
+        <p>I have been lucky to experience diverse international environments. I lived, studied and taught in Romania, France, Germany, Israel, Peru and the US.</p>
+        <h2 class="section-heading">Interested in working with me?</h2>
+        <p>I am actively recruiting students interested in working at the intersection of HCI, Health, and/or Behavior Change. I welcome students with a variety of backgrounds, including Informatics, Computer Science, Design, Psychology, and Health.</p>
+        <p>If you are a prospective PhD student, please apply to the <a href="#">Informatics PhD program</a>.</p>
+        <p>If you are a UCI undergraduate or Master student and want to do independent research with me, send me your CV or portfolio, transcript, and a description of what aspects of the work you are most interested in.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
