@@ -10,9 +10,7 @@ window.siteContent = {
     email: "rimsha.sarfaraz@cispa.de",
     scholar: "Google Scholar",
     linkedIn: "LinkedIn",
-    honorsHeading: "Honors & Awards",
-    communityHeading: "Community & Service",
-    researchHeading: "Research Interests",
+    honorsHeading: "Selected Awards",
     cvHeading: "Curriculum vitae",
     publicationsHeading: "Publications",
     publicationYear: "2025",
@@ -43,23 +41,16 @@ window.siteContent = {
       I worked on META funded projects focused on digital literacy, particularly addressing misinformation and improving
       people's ability to discern the truth. I also got to work on AI for maternal health care in Pakistan and was
       mentored by <a href="https://www.maryamustafa.com/" target="_blank" rel="noopener">Dr. Maryam Mustafa</a>.`,
-    researchInterestOne: `My research interests centre on <em>technology-facilitated harms</em>, particularly those
-      associated with generative AI, including misinformation, deepfakes, and other emerging forms of online harm.
-      I am interested in how <em>policies</em> and <em>regulatory frameworks</em> can respond to and prevent these harms.`,
-    researchInterestTwo: `I want to focus on how gender and sociocultural context shape people's experiences of
-      technology and online harms, especially in the Global South. I also want to explore how harmful online content
-      influence children's and adolescents' experiences and behaviour.`
+    biographyResearch: `<p class="home-bio">
+      My research sits broadly within <em>human-centred security, privacy, and online safety</em>. I want to study technology-facilitated harms and how they affect people's experiences online and offline.
+      I am also interested in the role of <em>technology policy and regulations</em> in preventing and responding to such harms. Across these areas, I am particularly interested in how <em>gender and sociocultural context</em> shape people's experiences of technology, especially in the Global South. I am also interested in how harmful online content and communities shape children's and adolescents' experiences and behaviour.
+    </p>`
   },
   lists: {
     awards: [
       "Best Paper Honorable Mention, ACM CHI 2025",
       "SIGCHI Gary Marsden Travel Award 2025",
       "LUMS Students as Co-Researchers Grant 2023"
-    ],
-    community: [
-      "Student Volunteer, ACM CHI 2025",
-      "Founding Member and Vice President, LUMS Women in Computing",
-      "Organizer, Google ExploreCSR Workshop at LUMS"
     ]
   },
   attributes: {
