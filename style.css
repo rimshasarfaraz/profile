@@ -377,6 +377,24 @@ a {
 }
 
 /* Embedded CV document */
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 12px;
+}
+
+.cv-actions a {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9375rem;
+  text-decoration: underline;
+}
+
+.cv-actions a:hover {
+  color: #6c997e;
+  text-decoration-thickness: 2px;
+}
+
 .cv-frame-wrap {
   width: 100%;
   height: 82vh;
