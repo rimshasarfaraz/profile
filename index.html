@@ -59,6 +59,28 @@
             <button
               class="tab-btn"
               role="tab"
+              id="tab-btn-talks"
+              aria-selected="false"
+              aria-controls="tab-talks"
+              tabindex="-1"
+              data-tab="talks"
+            >
+              <span data-content="talksTab"></span>
+            </button>
+            <button
+              class="tab-btn"
+              role="tab"
+              id="tab-btn-teaching"
+              aria-selected="false"
+              aria-controls="tab-teaching"
+              tabindex="-1"
+              data-tab="teaching"
+            >
+              <span data-content="teachingTab"></span>
+            </button>
+            <button
+              class="tab-btn"
+              role="tab"
               id="tab-btn-cv"
               aria-selected="false"
               aria-controls="tab-cv"
@@ -160,6 +182,73 @@
             </div>
           </div>
 
+          <!-- Talks: recorded paper presentation -->
+          <div
+            class="tab-panel"
+            id="tab-talks"
+            role="tabpanel"
+            aria-labelledby="tab-btn-talks"
+            tabindex="0"
+          >
+            <h2 class="talk-title" data-content="talkTitle"></h2>
+            <div class="talk-video-wrap">
+              <button
+                class="talk-video-preview"
+                type="button"
+                aria-label="Play ACM CHI 2025 Paper Presentation"
+                data-video-src="https://www.youtube.com/embed/PihhYUnPwls?start=1&amp;autoplay=1"
+              >
+                <img
+                  src="https://img.youtube.com/vi/PihhYUnPwls/hq1.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <span class="talk-video-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Teaching: teaching and instructional experience -->
+          <div
+            class="tab-panel"
+            id="tab-teaching"
+            role="tabpanel"
+            aria-labelledby="tab-btn-teaching"
+            tabindex="0"
+          >
+            <h2 class="sr-only" data-content="teachingHeading"></h2>
+            <div class="teaching-list">
+              <article class="teaching-entry">
+                <p class="teaching-role">Teaching Assistant</p>
+                <h3 class="teaching-title">Humans of Computing: Past, Present &amp; Future (Seminar)</h3>
+                <p class="teaching-meta">
+                  <span>Saarland University</span>
+                  <span>October 2026 — Present</span>
+                </p>
+              </article>
+              <article class="teaching-entry">
+                <p class="teaching-role">Teaching Assistant</p>
+                <h3 class="teaching-title">Introduction to Data Science (Machine Learning Specialization)</h3>
+                <p class="teaching-meta">
+                  <span>LUMSx</span>
+                  <span>September 2024 — April 2025</span>
+                </p>
+              </article>
+              <article class="teaching-entry">
+                <p class="teaching-role">Teaching Assistant</p>
+                <h3 class="teaching-title">Data Science for Health Care Professionals</h3>
+                <p class="teaching-meta">
+                  <span>LUMS Learning Institute</span>
+                  <span>February 2024 — March 2024</span>
+                </p>
+              </article>
+            </div>
+          </div>
+
           <!-- Publications: entries grouped by year -->
           <div
             class="tab-panel"
@@ -256,6 +345,18 @@
       // Tab navigation: keep selected state, visible panel, and URL hash in sync.
       const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
       const tabPanels = Array.from(document.querySelectorAll('.tab-panel'));
+
+      const talkVideoPreview = document.querySelector('.talk-video-preview');
+      talkVideoPreview.addEventListener('click', () => {
+        const iframe = document.createElement('iframe');
+        iframe.src = talkVideoPreview.dataset.videoSrc;
+        iframe.title = 'ACM CHI 2025 Paper Presentation';
+        iframe.allow =
+          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.allowFullscreen = true;
+        talkVideoPreview.replaceWith(iframe);
+      });
 
       function showTab(name, updateLocation = true) {
         if (!tabButtons.some((button) => button.dataset.tab === name)) {

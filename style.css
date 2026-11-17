@@ -487,6 +487,119 @@ a {
   text-decoration-thickness: 2px;
 }
 
+/* Talks: responsive video preview */
+.talk-title {
+  margin-bottom: 16px;
+  color: var(--text);
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.talk-video-wrap {
+  width: min(100%, 640px);
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #000;
+}
+
+.talk-video-wrap iframe,
+.talk-video-preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.talk-video-preview {
+  position: relative;
+  padding: 0;
+  background: #000;
+  cursor: pointer;
+}
+
+.talk-video-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.talk-video-preview:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: -3px;
+}
+
+.talk-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 64px;
+  height: 46px;
+  place-items: center;
+  border-radius: 12px;
+  background: #c00;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.18s ease;
+}
+
+.talk-video-preview:hover .talk-video-play {
+  background: #f00;
+}
+
+.talk-video-play svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* Teaching: role, course, institution, and dates */
+.teaching-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.teaching-entry {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.teaching-entry:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.teaching-role {
+  margin-bottom: 3px;
+  color: #6c997e;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.teaching-title {
+  margin-bottom: 5px;
+  color: var(--text);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.teaching-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
 /* Project filters and card grid */
 .project-filters {
   display: flex;
