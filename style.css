@@ -578,45 +578,6 @@ a {
   fill: currentColor;
 }
 
-/* Teaching: role, course, institution, and dates */
-.teaching-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.teaching-entry {
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-}
-
-.teaching-entry:last-child {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-.teaching-role {
-  margin-bottom: 3px;
-  color: #6c997e;
-  font-size: 0.9375rem;
-  font-weight: 500;
-}
-
-.teaching-title {
-  margin-bottom: 5px;
-  color: var(--text);
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-.teaching-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 16px;
-  color: var(--muted);
-  font-size: 0.9375rem;
-}
 
 /* Project filters and card grid */
 .project-filters {
